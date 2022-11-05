@@ -4,7 +4,7 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+// use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
@@ -28,8 +28,8 @@ class User
     private ?string $phone = null;
 
    
-    #[ORM\Column]
-    private ?string $password = null;
+    // #[ORM\Column]
+    // private ?string $password = null;
 
     public function getId(): ?int
     {
@@ -92,17 +92,17 @@ class User
     
    
 
-    public function getPassword(): string
-    {
-        return $this->password;
-    }
+    // public function getPassword(): string
+    // {
+    //     return $this->password;
+    // }
 
-    public function setPassword(string $password): self
-    {
-        $this->password = $password;
+    // public function setPassword(string $password): self
+    // {
+    //     $this->password = $password;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
    
 }
